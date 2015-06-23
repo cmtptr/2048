@@ -1,0 +1,26 @@
+==== SYNOPSIS ==================================================================
+Play 2048 in a terminal or with automation.
+
+==== USAGE =====================================================================
+Invoke 2048 with the syntax:
+
+	2048 [<option>...]
+
+Try '2048 --help' for more information.
+
+==== DEPENDENCIES ==============================================================
+2048 depends on curses.
+
+==== INSTALLATION ==============================================================
+To build 2048, type:
+
+	make
+
+To install 2048:
+
+	make [DESTDIR=<path>] install
+
+If not specified, DESTDIR is "/usr/local" by default.
+
+==== LICENSE ===================================================================
+See LICENSE.
