@@ -14,7 +14,7 @@ clean:
 	$(RM) $(obj) $(bin)
 
 install: all
-	install -m755 "$(bin)" "$(DESTDIR)/usr/bin"
+	install -m755 "$(bin)" "$(DESTDIR)/bin"
 
 $O%.o: %.c
 	$(CC) $(CFLAGS) $(CFLAGS_EXTRA) $(CPPFLAGS) -c -o $@ $<
