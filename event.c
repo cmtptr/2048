@@ -244,7 +244,7 @@ int event_init(void)
 		goto abort_epfd;
 	}
 
-	char *path = client_path();
+	path = client_path();
 	if (!path)
 		goto abort_epfd;
 
