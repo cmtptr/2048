@@ -1,5 +1,4 @@
 CFLAGS ?= -O2 -pipe
-CFLAGS_EXTRA := -pthread
 CPPFLAGS := -pedantic -std=c11 -Wall -Werror -Wextra
 DESTDIR ?= /usr/local
 LDADD := -lcurses
@@ -17,10 +16,10 @@ install: all
 	install -m755 "$(bin)" "$(DESTDIR)/bin"
 
 $O%.o: %.c
-	$(CC) $(CFLAGS) $(CFLAGS_EXTRA) $(CPPFLAGS) -c -o $@ $<
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $<
 
 $(bin): $(obj)
-	$(CC) $(CFLAGS) $(CFLAGS_EXTRA) $(LDFLAGS) -o $@ $(obj) $(LDADD)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(obj) $(LDADD)
 
 $(bin) $(obj): makefile
 $O2048.o: 2048.c 2048.h
